@@ -2,40 +2,62 @@ $(document).ready(function(){
 
     var questions = [
         {
-            question: "Question 1",
+            question: "How many people were killed in the 1996 film Scream? ",
             answers: [
-                "answer1",
-                "answer2",
-                "answer3",
-                "answer4",
+                "Seven",
+                "Ten",
+                "Five",
+                "Elevn",
             ],
-            correct: "answer1"
+            correct: "Seven"
         },
         {
-            question: "Question 2",
+            question: "What year was Forrest Gump released?",
             answers: [
-                "answer1",
-                "answer2",
-                "answer3",
-                "answer4",
+                "1991",
+                "1989",
+                "1996",
+                "1994",
             ],
-            correct: "answer4"
+            correct: "1994"
         },
         {
-            question: "Question 3",
+            question: "Which 90’s movie featured the Looney Tunes on its soundtrack?",
             answers: [
-                "answer1",
-                "answer2",
-                "answer3",
-                "answer4",
+                "Who framed Roger Rabbit",
+                "Space Jam",
+                "Like Mike",
+                "Bugs Bunny",
             ],
-            correct: "answer2"
+            correct: "Space Jam"
+        },
+        {
+            question: "Which artist sang the song “Oh, Pretty Woman” from the film Pretty Woman?",
+            answers: [
+                "Roy Orbison",
+                "Julia Roberts",
+                "Jason Alexander",
+                "Richard Gere",
+            ],
+            correct: "Roy Orbison"
+        },
+        {
+            question: "“Do you understand the words that are coming out of my mouth?” is from what 90's movie?",
+            answers: [
+                "Back to the Future",
+                "Molon",
+                "Rush Hour",
+                "Big Mommas House",
+            ],
+            correct: "Rush Hour"
         },
     ]
 
     var index = 0;
     var intervalId;
     var timer;
+
+  
 
     function displayQuestion(){
         $("#answerbox").empty()
@@ -74,7 +96,7 @@ $(document).ready(function(){
         }, 1 * 1000)
     }
 
-    $(document).on("click", ".answerchoice", function(){
+      $(document).on("click", ".answerchoice", function(){
         var choice = $(this).val();
 
         if(choice === questions[index].correct){
