@@ -100,9 +100,11 @@ $(document).ready(function(){
         var choice = $(this).val();
 
         if(choice === questions[index].correct){
-            console.log("You right")
+            // console.log("You right")
+            alert("You got it dude!")
         } else {
-            console.log("you wrong")
+            // console.log("you wrong")
+            alert("No soup for you")
         }
 
 
@@ -113,9 +115,9 @@ $(document).ready(function(){
             clearInterval(intervalId)
         }
     })
+    
 
     displayQuestion();
-
 
 
 })
