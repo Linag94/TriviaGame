@@ -51,13 +51,21 @@ $(document).ready(function(){
             ],
             correct: "Rush Hour"
         },
+        {
+            question: "Thanks for playing",
+            answers: [
+                "Play Again",
+                
+            ],
+            correct: "Play Again"
+        },
     ]
+    
 
     var index = 0;
     var intervalId;
     var timer;
 
-  
 
     function displayQuestion(){
         $("#answerbox").empty()
@@ -102,9 +110,14 @@ $(document).ready(function(){
         if(choice === questions[index].correct){
             // console.log("You right")
             alert("You got it dude!")
+            // message.innerHTML = "<span class='duplicateMessage'>You Got It Dude!</span>";
+            // alert(document.getElementById("You Got It Dude!").innerHTML)
         } else {
             // console.log("you wrong")
             alert("No soup for you")
+            // message.innerHTML = "<span class='duplicateMessage'>No Soup For You!</span>";
+            // alert(document.getElementById("No Soup For You!").innerHTML)
+            
         }
 
 
@@ -112,12 +125,17 @@ $(document).ready(function(){
         if(index < questions.length){
             displayQuestion();
         } else {
-            clearInterval(intervalId)
-        }
+            clearInterval(intervalId);
+        } 
+
+    })
+
+    $("#Play-Again").on("click",function(){
+            location.reload();
+
     })
     
-
     displayQuestion();
-
+    // location.reload();
 
 })
