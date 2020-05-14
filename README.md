@@ -8,7 +8,7 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 
 
-**[Click Here to Watch the Demo](https://youtu.be/fBIj8YsA9dk)**.
+**[Click Here to Watch the Demo](https://linag94.github.io/TriviaGame/)**.
 
 * You'll create a trivia form with multiple choice or true/false options (your choice).
 
